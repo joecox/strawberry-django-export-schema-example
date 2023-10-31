@@ -16,19 +16,19 @@ tests = ["mypy (>=0.800)", "pytest", "pytest-asyncio"]
 
 [[package]]
 name = "django"
-version = "4.2.6"
-description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
+version = "3.2.20"
+description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.6"
 files = [
-    {file = "Django-4.2.6-py3-none-any.whl", hash = "sha256:a64d2487cdb00ad7461434320ccc38e60af9c404773a2f95ab0093b4453a3215"},
-    {file = "Django-4.2.6.tar.gz", hash = "sha256:08f41f468b63335aea0d904c5729e0250300f6a1907bf293a65499496cdbc68f"},
+    {file = "Django-3.2.20-py3-none-any.whl", hash = "sha256:a477ab326ae7d8807dc25c186b951ab8c7648a3a23f9497763c37307a2b5ef87"},
+    {file = "Django-3.2.20.tar.gz", hash = "sha256:dec2a116787b8e14962014bf78e120bba454135108e1af9e9b91ade7b2964c40"},
 ]
 
 [package.dependencies]
-asgiref = ">=3.6.0,<4"
-sqlparse = ">=0.3.1"
-tzdata = {version = "*", markers = "sys_platform == \"win32\""}
+asgiref = ">=3.3.2,<4"
+pytz = "*"
+sqlparse = ">=0.2.2"
 
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
@@ -60,6 +60,17 @@ files = [
 six = ">=1.5"
 
 [[package]]
+name = "pytz"
+version = "2023.3.post1"
+description = "World timezone definitions, modern and historical"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pytz-2023.3.post1-py2.py3-none-any.whl", hash = "sha256:ce42d816b81b68506614c11e8937d3aa9e41007ceb50bfdcb0749b921bf646c7"},
+    {file = "pytz-2023.3.post1.tar.gz", hash = "sha256:7b4fddbeb94a1eba4b557da24f19fdf9db575192544270a9101d8509f9f43d7b"},
+]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -88,13 +99,13 @@ test = ["pytest", "pytest-cov"]
 
 [[package]]
 name = "strawberry-graphql"
-version = "0.211.1"
+version = "0.209.1"
 description = "A library for creating GraphQL APIs"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "strawberry_graphql-0.211.1-py3-none-any.whl", hash = "sha256:b33ee3b030c46f6504594773fb1bc0cbc462c1c088f3d67fcb35df44de62da02"},
-    {file = "strawberry_graphql-0.211.1.tar.gz", hash = "sha256:62e68ffcb60c4419cc4729a2da2fd996fc9c8761b0baeca1f16aff6785b6a9d9"},
+    {file = "strawberry_graphql-0.209.1-py3-none-any.whl", hash = "sha256:c2ffa1c343c06e3b2b407b52e75bd5179704702dd5d2d1b0265cd46be440a703"},
+    {file = "strawberry_graphql-0.209.1.tar.gz", hash = "sha256:c9b6a541a0a1fef07cbf2242e439aaebeb5a20c426cf2b0ba6b605b00d86352f"},
 ]
 
 [package.dependencies]
@@ -116,24 +127,23 @@ flask = ["flask (>=1.1)"]
 opentelemetry = ["opentelemetry-api (<2)", "opentelemetry-sdk (<2)"]
 pydantic = ["pydantic (>1.6.1)"]
 pyinstrument = ["pyinstrument (>=4.0.0)"]
-quart = ["quart (>=0.19.3)"]
 sanic = ["sanic (>=20.12.2)"]
 starlite = ["starlite (>=1.48.0)"]
 
 [[package]]
 name = "strawberry-graphql-django"
-version = "0.22.0"
+version = "0.17.3"
 description = "Strawberry GraphQL Django extension"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "strawberry_graphql_django-0.22.0-py3-none-any.whl", hash = "sha256:624c8cad698feaad439e13127d89baed0761540ca23e6cc4067c289fc49374fe"},
-    {file = "strawberry_graphql_django-0.22.0.tar.gz", hash = "sha256:b8b124807af2d09c6a23e70a85f1585eec92ae3ada0e7d0c9eaf0a7bcdbb9794"},
+    {file = "strawberry_graphql_django-0.17.3-py3-none-any.whl", hash = "sha256:d1391151ceab226b11a1c0d64e4e9701ec2e177151f45294a1b01feb818312af"},
+    {file = "strawberry_graphql_django-0.17.3.tar.gz", hash = "sha256:aca5fed51db097fc39a635e89921752a612c5aac4be94ce8715438af0e426ede"},
 ]
 
 [package.dependencies]
 Django = ">=3.2"
-strawberry-graphql = ">=0.209.4"
+strawberry-graphql = ">=0.199.0"
 
 [package.extras]
 debug-toolbar = ["django-debug-toolbar (>=3.4)"]
@@ -150,18 +160,7 @@ files = [
     {file = "typing_extensions-4.8.0.tar.gz", hash = "sha256:df8e4339e9cb77357558cbdbceca33c303714cf861d1eef15e1070055ae8b7ef"},
 ]
 
-[[package]]
-name = "tzdata"
-version = "2023.3"
-description = "Provider of IANA time zone data"
-optional = false
-python-versions = ">=2"
-files = [
-    {file = "tzdata-2023.3-py2.py3-none-any.whl", hash = "sha256:7e65763eef3120314099b6939b5546db7adce1e7d6f2e179e3df563c70511eda"},
-    {file = "tzdata-2023.3.tar.gz", hash = "sha256:11ef1e08e54acb0d4f95bdb1be05da659673de4acbd21bf9c69e94cc5e907a3a"},
-]
-
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "17df2f9b5b6e2f0a735c268a76206c04f3c85d5b70a85ca7bf4f08c64395efcd"
+content-hash = "099304c2439be141c90070cb2b57ca452425c45cfe4e368ebe08ca3e450d33e0"

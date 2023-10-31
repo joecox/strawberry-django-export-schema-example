@@ -7,9 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django = "^4.2.6"
-strawberry-graphql = "^0.211.1"
-strawberry-graphql-django = "^0.22.0"
+django = "3.2.20"
+strawberry-graphql = "0.209.1"
+strawberry-graphql-django = "0.17.3"
 
 
 [build-system]
