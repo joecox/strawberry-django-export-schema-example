@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "strawberry-django-export-schema-example"
+version = "0.1.0"
+description = ""
+authors = ["Joe Cox <joe@medallion.co>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.6"
+strawberry-graphql = "^0.211.1"
+strawberry-graphql-django = "^0.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
